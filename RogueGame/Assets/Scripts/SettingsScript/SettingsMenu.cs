@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using UnityEngine.UI;
-
+using UnityEngine.Audio;
 public class SettingsMenu : MonoBehaviour
 {
 
@@ -13,10 +13,11 @@ public class SettingsMenu : MonoBehaviour
     }
 
     // Start is called before the first frame update
-   
+
+    public AudioMixer audioMixer;
     public void SetVolume (float volume)
     {
-
+        audioMixer.SetFloat("volume", volume);
     }
 
 
