@@ -3246,7 +3246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5939a98b8b2410146b080ae91edce856, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vel: 8
+  vel: 2
   startWaitTime: 0
   Waypoints:
   - {fileID: 889630526}
