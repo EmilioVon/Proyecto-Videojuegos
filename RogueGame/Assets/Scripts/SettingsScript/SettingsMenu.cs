@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using UnityEngine.UI;
-using UnityEngine.Audio;
 public class SettingsMenu : MonoBehaviour
 {
 
