@@ -6,6 +6,26 @@ using UnityEngine.UI;
 public class SettingsMenu : MonoBehaviour
 {
 
+    Resolution[] resolutions;
+
+    public Dropdown resolutionDrowpdown;
+    private void Start()
+    {
+      resolutions = Screen.resolutions;
+
+        resolutionDrowpdown.ClearOptions();
+
+        List<string> options = new List<string>();
+
+        for (int i = 0; i < resolutions.Length; i++)
+        {
+            string option = resolutions[i].width + " x " + resolutions[i].height;
+            options.Add(option);
+        }
+
+        resolutionDrowpdown.AddOptions(options);
+    }
+
     public void BackToMenu()
     {
         SceneManager.LoadScene("menu");
@@ -29,4 +49,6 @@ public class SettingsMenu : MonoBehaviour
     {
         Screen.fullScreen = isFullscreen;
     }
+
+
 }
