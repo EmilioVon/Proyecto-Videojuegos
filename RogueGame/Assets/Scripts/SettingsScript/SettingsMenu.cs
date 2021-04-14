@@ -14,7 +14,10 @@ public class SettingsMenu : MonoBehaviour
 
     // Start is called before the first frame update
    
+    public void SetVolume (float volume)
+    {
 
+    }
 
 
 
