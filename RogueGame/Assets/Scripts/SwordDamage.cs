@@ -38,4 +38,10 @@ public class SwordDamage : MonoBehaviour
         }
         
     }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(attackPos.position, attackRange);
+    }
 }
