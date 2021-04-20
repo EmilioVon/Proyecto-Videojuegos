@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
    public float speed;
-    public int health;
     private Rigidbody2D myRigidbody;
     private Vector3 change;
     private Animator animator;
@@ -24,11 +23,6 @@ public class PlayerMovement : MonoBehaviour
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");
         UpdateAnimationAndMove();
-
-        if(health <= 0)
-        {
-            Destroy(gameObject);
-        }
     }
 
     void UpdateAnimationAndMove()

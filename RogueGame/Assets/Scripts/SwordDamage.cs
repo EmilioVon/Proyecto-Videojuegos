@@ -21,8 +21,7 @@ public class SwordDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(tpataque <= 0)
-        {
+    
             if (Input.GetKey(KeyCode.Space))
             {
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, queEnemigo);
@@ -30,18 +29,8 @@ public class SwordDamage : MonoBehaviour
                 {
                     enemiesToDamage[i].GetComponent<Patrol>().TakeDamage(damage);
                 }
-            }
-            tpataque = emptpataque;
-        }
-        else { 
-            tpataque -= Time.deltaTime;
-        }
-        
+            }    
     }
 
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPos.position, attackRange);
-    }
+  
 }

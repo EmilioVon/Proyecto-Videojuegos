@@ -37,7 +37,11 @@ public class Patrol : MonoBehaviour
                     waitTime -= Time.deltaTime;
                 }
             }
+            if(health <= 0)
+        {
+            Destroy(gameObject);
         }
+     }
     public void TakeDamage(int damage) {
         health -= damage;
         Debug.Log("Lastimaste al enemigo");
