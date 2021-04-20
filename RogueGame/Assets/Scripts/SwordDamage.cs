@@ -21,7 +21,8 @@ public class SwordDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    
+
+   
             if (Input.GetKey(KeyCode.Space))
             {
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, queEnemigo);
@@ -29,8 +30,14 @@ public class SwordDamage : MonoBehaviour
                 {
                     enemiesToDamage[i].GetComponent<Patrol>().TakeDamage(damage);
                 }
-            }    
+            }
+          
     }
 
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPos.position, attackRange);
+    }
   
 }

@@ -145,7 +145,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 279032496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.019, y: -0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 501459570}
@@ -246,13 +246,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05d28af50d611fe478de4b172cca1f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptpataque: 0.1
+  emptpataque: 0.3
   attackPos: {fileID: 279032497}
   queEnemigo:
     serializedVersion: 2
     m_Bits: 256
-  attackRange: 1.1
-  damage: 2
+  attackRange: 1.13
+  damage: 1
 --- !u!1 &513053602
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,7 +394,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  health: 0
 --- !u!61 &513053608
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3435,7 +3434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vel: 2
   startWaitTime: 0
-  health: 0
+  health: 20
   Waypoints:
   - {fileID: 889630526}
   - {fileID: 2081970469}
