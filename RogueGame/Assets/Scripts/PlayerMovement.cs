@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D myRigidbody;
     private Vector3 change;
     private Animator animator;
+    public GameObject bloodEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,11 @@ public class PlayerMovement : MonoBehaviour
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");
         UpdateAnimationAndMove();
+
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void UpdateAnimationAndMove()
@@ -51,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        Instantiate(bloodEffect, transform.position, Quaternion.identity);
         health -= damage;
         Debug.Log("Lastimaste al enemigo");
     }
