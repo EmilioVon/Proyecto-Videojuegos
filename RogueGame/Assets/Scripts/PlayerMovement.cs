@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D myRigidbody;
     private Vector3 change;
     private Animator animator;
-    public GameObject bloodEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -55,10 +54,5 @@ public class PlayerMovement : MonoBehaviour
             );
     }
 
-    public void TakeDamage(int damage)
-    {
-        Instantiate(bloodEffect, transform.position, Quaternion.identity);
-        health -= damage;
-        Debug.Log("Lastimaste al enemigo");
-    }
+    
 }

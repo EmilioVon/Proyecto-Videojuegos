@@ -7,6 +7,7 @@ public class Patrol : MonoBehaviour
     public float vel;
     private float waitTime;
     public float startWaitTime;
+    public int health;
 
     public Transform[] Waypoints;
     private int lugarRand;
@@ -37,5 +38,9 @@ public class Patrol : MonoBehaviour
                 }
             }
         }
+    public void TakeDamage(int damage) {
+        health -= damage;
+        Debug.Log("Lastimaste al enemigo");
+    }
         
 }

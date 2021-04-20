@@ -250,7 +250,7 @@ MonoBehaviour:
   attackPos: {fileID: 279032497}
   queEnemigo:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   attackRange: 1.1
   damage: 2
 --- !u!1 &513053602
@@ -3304,7 +3304,7 @@ GameObject:
   - component: {fileID: 2130240410}
   - component: {fileID: 2130240414}
   - component: {fileID: 2130240413}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy_Goblin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3435,6 +3435,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vel: 2
   startWaitTime: 0
+  health: 0
   Waypoints:
   - {fileID: 889630526}
   - {fileID: 2081970469}

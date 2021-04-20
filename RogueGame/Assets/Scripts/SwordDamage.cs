@@ -28,7 +28,7 @@ public class SwordDamage : MonoBehaviour
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, queEnemigo);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
-                    enemiesToDamage[i].GetComponent<PlayerMovement>().TakeDamage(damage);
+                    enemiesToDamage[i].GetComponent<Patrol>().TakeDamage(damage);
                 }
             }
             tpataque = emptpataque;
@@ -41,7 +41,7 @@ public class SwordDamage : MonoBehaviour
 
     void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.blue;
+        Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPos.position, attackRange);
     }
 }
