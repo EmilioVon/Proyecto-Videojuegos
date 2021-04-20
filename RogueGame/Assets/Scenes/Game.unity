@@ -3371,7 +3371,7 @@ SpriteRenderer:
   m_Sprite: {fileID: 4760345028161329882, guid: 41a076ad307c80e4d960ce2c15b21f03,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.16, y: 0.16}
@@ -3433,7 +3433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vel: 2
-  startWaitTime: 0
+  startWaitTime: 1
   health: 20
   Waypoints:
   - {fileID: 889630526}
