@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
    public float speed;
+    public int health;
     private Rigidbody2D myRigidbody;
     private Vector3 change;
     private Animator animator;
@@ -46,5 +47,11 @@ public class PlayerMovement : MonoBehaviour
         myRigidbody.MovePosition(
             transform.position + change * speed * Time.deltaTime
             );
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        Debug.Log("Lastimaste al enemigo");
     }
 }
