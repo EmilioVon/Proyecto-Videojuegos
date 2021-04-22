@@ -8856,7 +8856,7 @@ Transform:
   m_GameObject: {fileID: 2130240409}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.67, y: -1.43, z: 0}
-  m_LocalScale: {x: 4.8182387, y: 5.220372, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1004015527}
   m_Father: {fileID: 0}
@@ -8879,7 +8879,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -8903,6 +8903,7 @@ MonoBehaviour:
   vel: 2
   startWaitTime: 1
   health: 20
+  BloodSplash: {fileID: 0}
   Waypoints:
   - {fileID: 889630526}
   - {fileID: 2081970469}
