@@ -1760,8 +1760,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 4
   currentHealth: 0
-  healthBar: {fileID: 0}
-  rb: {fileID: 0}
+  healthBar: {fileID: 1145505062}
+  rb: {fileID: 513053606}
 --- !u!1 &554551998
 GameObject:
   m_ObjectHideFlags: 0
@@ -9304,7 +9304,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

@@ -9,11 +9,11 @@ public class PlayerHealth : MonoBehaviour
     public int currentHealth;
     public HealthBar healthBar;
 
-    public Rigidbody rb;
+    public Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
@@ -30,12 +30,8 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= damage; 
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.tag == "Enemy")
-        {
-            Debug.Log("damage taken");
-            TakeDamage(1);
-        }
+        Debug.Log("touched enemy");
     }
 }
