@@ -27,11 +27,18 @@ public class PlayerHealth : MonoBehaviour
 
     void TakeDamage(int damage)
     {
-        currentHealth -= damage; 
+        currentHealth -= damage;
+
+        healthBar.SetHealth(currentHealth);
     }
 
-    private void OnCollisionEnter(Collision collision)
+  
+    private void OnCollisionEnter2D(Collision2D other1)
     {
-        Debug.Log("touched enemy");
+        if (other1.collider.tag == "Enemy")
+        {
+            Debug.Log("has collided with gobling");
+            TakeDamage(1);
+        }
     }
 }
