@@ -1581,6 +1581,7 @@ GameObject:
   - component: {fileID: 513053607}
   - component: {fileID: 513053608}
   - component: {fileID: 513053609}
+  - component: {fileID: 513053610}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1745,6 +1746,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd7fcb302119a334889b648baa990aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &513053610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513053602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1240481ab56f45e4e9e7005f3a32358c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 4
+  currentHealth: 0
+  healthBar: {fileID: 0}
+  rb: {fileID: 0}
 --- !u!1 &554551998
 GameObject:
   m_ObjectHideFlags: 0
@@ -9187,7 +9204,7 @@ GameObject:
   - component: {fileID: 2130240415}
   m_Layer: 8
   m_Name: Enemy_Goblin
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
