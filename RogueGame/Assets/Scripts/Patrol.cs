@@ -9,10 +9,11 @@ public class Patrol : MonoBehaviour
     public float startWaitTime;
     public int health;
     public AudioClip BloodSplash;
+    
 
     public Transform[] Waypoints;
     private int lugarRand;
-    
+   
 
 
     // Start is called before the first frame update
@@ -41,6 +42,7 @@ public class Patrol : MonoBehaviour
             }
             if(health <= 0)
         {
+
             Destroy(gameObject);
             AudioSource.PlayClipAtPoint(BloodSplash, transform.position);
         
