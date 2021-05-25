@@ -8,48 +8,76 @@ public class EnemigoVolador : MonoBehaviour
     public float ataqueVision;
     public float speed;
 
-    GameObject player;
+    [SerializeField]
+    Transform CastPoint;
 
-    Vector3 initialPosition;
-
-    Animator anim;
+    [SerializeField]
+    Transform player;
+ 
     Rigidbody2D rb2d;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("PLayer");
-        initialPosition = transform.position;
-
-        anim = GetComponent<Animator>();
-        rb2d = GetComponent<Rigidbody2D>();
-        
+        rb2d = GetComponent<Rigidbody2D>();    
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 target = initialPosition;
+        float distPlayer = Vector2.Distance(transform.position, player.position);
 
-        RaycastHit2D hit = Physics2D.Raycast(
-            transform.position, player.transform.position - transform.position, radioVision,
-            1 << LayerMask.NameToLayer("Default")
-            );
-
-        Vector3 forward = transform.TransformDirection(player.transform.position - transform.position);
-        Debug.DrawRay(transform.position, forward, Color.red);
-
-        if (hit.collider != null)
+        if (CanSeePlayer(radioVision))
         {
-            if (hit.collider.tag == "Player")
-            {
-                target = player.transform.position;
-            }
+            ChasePlayer();
         }
-
-        float distance = Vector3.Distance(target, transform.position);
-        Vector3 dir = (target - transform.position).normalized;
-
+        else
+        {
+            StopChasingPlayer();
+        }
        
+    }
+
+    bool CanSeePlayer(float distance)
+    {
+        bool val = false;
+        float castDist = distance;
+
+        Vector2 endPos = CastPoint.position + Vector3.right * distance;
+        RaycastHit2D hit = Physics2D.Linecast(CastPoint.position, endPos, 1 << LayerMask.NameToLayer("Default"));
+
+        if(hit.collider != null)
+        {
+            if (hit.collider.gameObject.CompareTag("Player"))
+            {
+                val = true;
+            }
+            else
+            {
+                val = false;
+            }
+
+        }
+        return val;
+    }
+
+    void ChasePlayer()
+    {
+        if(transform.position.x < player.position.x)
+        {
+            rb2d.velocity = new Vector2(speed, 0);
+            transform.localScale = new Vector2(1, 1);
+        }
+        else
+        {
+            rb2d.velocity = new Vector2(-speed, 0);
+            transform.localScale = new Vector2(-1, 1);
+        }
+    }
+
+    void StopChasingPlayer()
+    {
+        rb2d.velocity = new Vector2(0, 0);
+
     }
 }
