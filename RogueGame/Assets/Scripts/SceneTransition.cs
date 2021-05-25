@@ -11,7 +11,7 @@ public class SceneTransition : MonoBehaviour
     {
         if(other.CompareTag("Player") && !other.isTrigger)
         {
-            SceneManager.LoadScene("NuevoNivel");
+            SceneManager.LoadScene(sceneToLoad);
         }
     }
 }
