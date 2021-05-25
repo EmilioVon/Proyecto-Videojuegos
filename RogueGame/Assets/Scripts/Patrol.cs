@@ -9,7 +9,7 @@ public class Patrol : MonoBehaviour
     public float startWaitTime;
     public int health;
     public AudioClip BloodSplash;
-    
+    public GameObject deathparticle;
 
     public Transform[] Waypoints;
     private int lugarRand;
@@ -42,7 +42,7 @@ public class Patrol : MonoBehaviour
             }
             if(health <= 0)
         {
-
+        	Instantiate(deathparticle, transform.position, transform.rotation);
             Destroy(gameObject);
             AudioSource.PlayClipAtPoint(BloodSplash, transform.position);
         
