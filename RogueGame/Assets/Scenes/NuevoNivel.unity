@@ -8950,9 +8950,9 @@ GameObject:
   - component: {fileID: 2005632494}
   - component: {fileID: 2005632493}
   - component: {fileID: 2005632492}
-  - component: {fileID: 2005632496}
   - component: {fileID: 2005632495}
   - component: {fileID: 2005632497}
+  - component: {fileID: 2005632496}
   m_Layer: 8
   m_Name: EnemigoVolador
   m_TagString: Enemy
@@ -9065,8 +9065,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &2005632496
-BoxCollider2D:
+--- !u!60 &2005632496
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -9078,7 +9078,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.020519435, y: 0.057886124}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -9088,9 +9088,18 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.6580101, y: 0.6816273}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.16587128, y: 0.3213728}
+      - {x: -0.30187368, y: 0.19045155}
+      - {x: -0.31313574, y: 0.07137264}
+      - {x: -0.30947807, y: -0.07854915}
+      - {x: -0.1853243, y: -0.15705746}
+      - {x: -0.051844575, y: -0.24338901}
+      - {x: 0.122295946, y: -0.23951817}
+      - {x: 0.31313574, y: -0.051452674}
+      - {x: 0.31313553, y: 0.16209997}
+      - {x: 0.17716245, y: 0.30976003}
 --- !u!114 &2005632497
 MonoBehaviour:
   m_ObjectHideFlags: 0
