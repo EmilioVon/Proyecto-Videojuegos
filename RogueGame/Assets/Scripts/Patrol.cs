@@ -43,7 +43,7 @@ public class Patrol : MonoBehaviour
         	Instantiate(deathparticle, transform.position, transform.rotation);
             Destroy(gameObject);
             AudioSource.PlayClipAtPoint(BloodSplash, transform.position);
-        
+            ScoreManager.instance.AddKillPoint();
 
         }
      }

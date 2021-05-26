@@ -77,7 +77,7 @@ public class EnemigoVolador : MonoBehaviour
             Destroy(gameObject);
             AudioSource.PlayClipAtPoint(BloodSplash, transform.position);
 
-
+            
         }
     }
 
