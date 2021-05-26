@@ -6513,10 +6513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1240481ab56f45e4e9e7005f3a32358c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 4
-  currentHealth: 0
   healthBar: {fileID: 1145505062}
-  rb: {fileID: 513053606}
 --- !u!114 &513053611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12780,7 +12777,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACQn+s+0t19WAIAAPwEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2yAQ/Ssezk1HOB92emsVx+khHxOnk4suCFYWYwQaQLGdjP97FyRZqnoyfvt29+1j0ReR2tXAvbFrK8WjEUB+zEg4k2+zIfgAB7Y1eiM/oee8S+HLQGKR88q8NIjTkOZMBd5K/lNvVSAnCDZaFsZWK7GF1DjvEC6YcoAha3zI1gh9zcgBfy5uQ8oRT/NFOH3i6TaZnfDIQXuwIypNvtPkerHsEnp6y240V6yqQQTpQxLt2bSlaRyqY4QBuFFKuk4R8cc6Tpyy2jU4DxKEZDhhlIHdEShBbksf9I7Tn4vCge9EWXa8kxatauuSX6b1r2Ju1yr7YKoJna7pPKpqiz7+F7+gMVxYUz30fWkSevhS8t0rO3Lm/MjgMXw3SKfRoD1TO5YreC9BP5m1NY0WGPS2CamNg/nd8Pc8WloC3w14K3UCNvXgeDK5njDDKU5/SJWs8ujkVQtslImOxyUAi3fzGwXHFXFdCUSDij8O3th2vEtd4F5a5zHUTamDvNw0NlDJKnoWpml8aqyGCHeia9BM+eMLlvHTK5zERm0nkXsWXk3XvIv1j2GSEuGBnyST0IvZny/LlWb/CK58brySGgbRIfCEPqVG63bDxp70aZvGFoyP0raNFP+uFrlZFvlCwG2eU8gXl8uLK3xaBRWwvOGXlNMbEndPapyTqZdWaGcP3poeimvcs/5jMltbVsdtF5bt1/KzMiPLpS7MhlsA/dxWOAsHi03wXYqVkGjQBryXOt43+cqIMnwHIjsXyuKkq4O3LBuqZKSWH8YHJCNp/Hpk5EROfwFQSwMEFAAACAgAAJCf66fX/DptAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTVUVBKL0osyCgGihiCOKWZKSB2tJKZRVqSeUqqZVKSYWqSubGFrompuUWaYUqqhVmysWGyoZlSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAJCf6z7S3X1YAgAA/AQAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAJCf66fX/DptAAAAeAAAAAkAJAAAAAAAAAAAAAAApQIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABdAwAAAAA=
+    dataString: UEsDBBQAAAgIAACQn+u24wWuVwIAAPwEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2yAQ/SseznVH5MtOb63iOD3kY+J0ctEFwcpijEADKLaT8X/vgiRLVU/Gb9/uvn0s+iJSuxq4N3ZtpXg0AsiPGQln8m02BB/gwLZGb+Qn9Jx3KXwZSCxyXpmXBnEa0pypwFvJf+qtCuQEwUbLwthqJbaQGucdwgVTDjBkjQ/ZGqGvGTngz/w2pBzxdLEIp0883SazEx45aA92RKXJd5pcL5ZdQk9v2Y3milU1iCB9SKI9m7Y0jUN1jDAAN0pJ1yki/ljHiVNWuwbnQYKQDCeMMrA7AiXIbemD3nH6c1E48J0oy4530qJVbV3yy7T+VcztWmUfTDWh0zW9jKraoo//xec0hgtrqoe+L01CD19KvntlR86cHxk8hu8G6TQatGdqx3IF7yXoJ7O2ptECg942IbVxcHE3/D2PlpbAdwPeSp2ATT04nkyuJ8xwitMfUiWrPDp51QIbZaLjcQnA4t38RsFxRVxXAtGg4o+DN7Yd71IXuJfWeQx1U+ogLzeNDVSyip6FaRqfGqshwp3oGjRT/viCZfz0CiexUdtJ5J6FV9M172L9Y5ikRHjgJ8kk9GL258typdk/giufG6+khkF0CDyhT6nRut2wsSd92qaxBeOjtG0jxb+rRW6WRb4QcJvnFPLF5XJ+hU+roAKWN/yScnpD4u5JjXMy9dIK7ezBW9NDcY171n9MZmvL6rjtwrL9Wn5WZmS51IXZcAugn9sKZ+FgsQm+S7ESEg3agPdSx/smXxlRhu9AZOdCWZx0dfCWZUOVjNTyw/iAZCSNX4+MnMjpL1BLAwQUAAAICAAAkJ/rp9f8Om0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNVRUEovSizIKAaKGII4pZkpIHa0kplFWpJ5SqplUpJhapK5sYWuiam5RZphSqqFWbKxYbKhmVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAAkJ/rtuMFrlcCAAD8BAAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAkJ/rp9f8Om0AAAB4AAAACQAkAAAAAAAAAAAAAACkAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAFwDAAAAAA==
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -14605,6 +14602,7 @@ GameObject:
   - component: {fileID: 2130240414}
   - component: {fileID: 2130240413}
   - component: {fileID: 2130240415}
+  - component: {fileID: 2130240416}
   m_Layer: 8
   m_Name: Enemy_Goblin
   m_TagString: Enemy
@@ -14669,7 +14667,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 12
+  m_SortingOrder: 2
   m_Sprite: {fileID: 4760345028161329882, guid: 41a076ad307c80e4d960ce2c15b21f03,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -14757,6 +14755,27 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!50 &2130240416
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130240409}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &2146918288
 GameObject:
   m_ObjectHideFlags: 0
