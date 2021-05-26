@@ -14227,12 +14227,7 @@ MonoBehaviour:
   BloodSplash: {fileID: 8300000, guid: 9a3b230623d1a6048baf233ff2f4c8c6, type: 3}
   deathparticle: {fileID: 1507160724440436896, guid: 70b2ebd01514d68478ab2e3b26e97759,
     type: 3}
-  Waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  aiPath: {fileID: 524138656}
 --- !u!114 &2130240415
 MonoBehaviour:
   m_ObjectHideFlags: 0
