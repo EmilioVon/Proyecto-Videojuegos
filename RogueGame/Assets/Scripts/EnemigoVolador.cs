@@ -7,93 +7,79 @@ public class EnemigoVolador : MonoBehaviour
     public float radioVision;
     public float ataqueVision;
     public float speed;
+    public int health;
+    public AudioClip BloodSplash;
+    public GameObject deathparticle;
 
-    [SerializeField]
-    Transform CastPoint;
-
-    [SerializeField]
-    Transform player;
+    GameObject player;
+    Vector3 initialPosition;
  
     Rigidbody2D rb2d;
-
-    bool isFacingLeft;
-
+    Animator anim;
+ 
     // Start is called before the first frame update
     void Start()
     {
-        rb2d = GetComponent<Rigidbody2D>();    
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        initialPosition = transform.position;
+        rb2d = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        float distPlayer = Vector2.Distance(transform.position, player.position);
+        Vector3 target = initialPosition;
 
-        if (CanSeePlayer(radioVision))
+        RaycastHit2D hit = Physics2D.Raycast(
+            transform.position, player.transform.position - transform.position, radioVision, 1 << LayerMask.NameToLayer("Default")
+            );
+
+        Vector3 forward = transform.TransformDirection(player.transform.position - transform.position);
+        Debug.DrawRay(transform.position, forward, Color.red);
+
+        if (hit.collider != null)
         {
-            ChasePlayer();
-        }
-        else
-        {
-            StopChasingPlayer();
-        }
-       
-    }
-
-    bool CanSeePlayer(float distance)
-    {
-        bool val = false;
-        float castDist = distance;
-
-        if(isFacingLeft == true)
-        {
-            castDist = -distance;
-        }
-
-        Vector2 endPos = CastPoint.position + Vector3.right * castDist;
-        RaycastHit2D hit = Physics2D.Linecast(CastPoint.position, endPos, 1 << LayerMask.NameToLayer("Enemy"));
-
-        if(hit.collider != null)
-        {
-            if (hit.collider.gameObject.CompareTag("Player"))
+            if (hit.collider.tag == "Player")
             {
-                val = true;
+                target = player.transform.position;
             }
-            else
-            {
-                val = false;
-            }
-
-            Debug.DrawLine(CastPoint.position, hit.point, Color.red);
-
         }
-           
+
+        float distance = Vector3.Distance(target, transform.position);
+        Vector3 dir = (target - transform.position).normalized;
+
+        if (target != initialPosition && distance < ataqueVision)
+        {
+            anim.SetFloat("movX", dir.x);
+            anim.SetFloat("movY", dir.y);
+        }
+
         else
         {
-            Debug.DrawLine(CastPoint.position, endPos, Color.blue);
+            rb2d.MovePosition(transform.position + dir * speed * Time.deltaTime);
+            anim.speed = 1;
+            anim.SetFloat("movX", dir.x);
+            anim.SetFloat("movY", dir.y);
         }
-        return val;
-    }
 
-    void ChasePlayer()
-    {
-        if(transform.position.x < player.position.x)
+        if(target == initialPosition && distance < 0.02f)
         {
-            rb2d.velocity = new Vector2(speed, 0);
-            transform.localScale = new Vector2(1, 1);
-            isFacingLeft = false;
+            transform.position = initialPosition;
         }
-        else
+
+        Debug.DrawLine(transform.position, target, Color.green);
+
+        if (health <= 0)
         {
-            rb2d.velocity = new Vector2(-speed, 0);
-            transform.localScale = new Vector2(-1, 1);
-            isFacingLeft = true;
+            Instantiate(deathparticle, transform.position, transform.rotation);
+            Destroy(gameObject);
+            AudioSource.PlayClipAtPoint(BloodSplash, transform.position);
+
+
         }
     }
 
-    void StopChasingPlayer()
-    {
-        rb2d.velocity = new Vector2(0, 0);
-
-    }
+    
 }
