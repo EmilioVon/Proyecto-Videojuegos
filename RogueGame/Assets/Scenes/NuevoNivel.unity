@@ -8665,8 +8665,8 @@ Rigidbody2D:
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 2
-  m_CollisionDetection: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &2005632496
 BoxCollider2D:
@@ -8706,9 +8706,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6905b28911aefed428be7e60d0ba79c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioVision: 2.1
+  radioVision: 3
   ataqueVision: 1
-  speed: 4
+  speed: 5
 --- !u!1 &2073464076
 GameObject:
   m_ObjectHideFlags: 0
