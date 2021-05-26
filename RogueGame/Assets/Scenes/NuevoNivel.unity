@@ -8678,7 +8678,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.020519435, y: 0.057886124}
@@ -8706,8 +8706,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6905b28911aefed428be7e60d0ba79c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioVision: 1.2
-  ataqueVision: 1.02
+  radioVision: 2.1
+  ataqueVision: 1
   speed: 4
 --- !u!1 &2073464076
 GameObject:
