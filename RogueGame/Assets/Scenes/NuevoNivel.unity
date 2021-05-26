@@ -8954,7 +8954,7 @@ GameObject:
   - component: {fileID: 2005632497}
   - component: {fileID: 2005632496}
   m_Layer: 8
-  m_Name: EnemigoVolador
+  m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
