@@ -83,5 +83,9 @@ public class EnemigoVolador : MonoBehaviour
 
     }
 
-    
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        //Debug.Log("Lastimaste al enemigo");
+    }
 }
