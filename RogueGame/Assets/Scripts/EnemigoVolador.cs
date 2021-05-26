@@ -16,6 +16,8 @@ public class EnemigoVolador : MonoBehaviour
  
     Rigidbody2D rb2d;
 
+    bool isFacingLeft;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,8 +45,13 @@ public class EnemigoVolador : MonoBehaviour
         bool val = false;
         float castDist = distance;
 
-        Vector2 endPos = CastPoint.position + Vector3.right * distance;
-        RaycastHit2D hit = Physics2D.Linecast(CastPoint.position, endPos, 1 << LayerMask.NameToLayer("Default"));
+        if(isFacingLeft == true)
+        {
+            castDist = -distance;
+        }
+
+        Vector2 endPos = CastPoint.position + Vector3.right * castDist;
+        RaycastHit2D hit = Physics2D.Linecast(CastPoint.position, endPos, 1 << LayerMask.NameToLayer("Enemy"));
 
         if(hit.collider != null)
         {
@@ -57,6 +64,13 @@ public class EnemigoVolador : MonoBehaviour
                 val = false;
             }
 
+            Debug.DrawLine(CastPoint.position, hit.point, Color.red);
+
+        }
+           
+        else
+        {
+            Debug.DrawLine(CastPoint.position, endPos, Color.blue);
         }
         return val;
     }
@@ -67,11 +81,13 @@ public class EnemigoVolador : MonoBehaviour
         {
             rb2d.velocity = new Vector2(speed, 0);
             transform.localScale = new Vector2(1, 1);
+            isFacingLeft = false;
         }
         else
         {
             rb2d.velocity = new Vector2(-speed, 0);
             transform.localScale = new Vector2(-1, 1);
+            isFacingLeft = true;
         }
     }
 

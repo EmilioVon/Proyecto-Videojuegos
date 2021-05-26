@@ -6786,7 +6786,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1524751207}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CastPoint
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
@@ -8586,9 +8586,9 @@ GameObject:
   - component: {fileID: 2005632496}
   - component: {fileID: 2005632495}
   - component: {fileID: 2005632497}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemigoVolador
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8686,7 +8686,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2005632491}
-  m_BodyType: 1
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -8740,6 +8740,7 @@ MonoBehaviour:
   radioVision: 2
   ataqueVision: 2
   speed: 4
+  CastPoint: {fileID: 1524751207}
   player: {fileID: 1301214067}
 --- !u!1 &2073464076
 GameObject:
