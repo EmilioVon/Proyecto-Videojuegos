@@ -7,6 +7,9 @@ public class EnemigoVolador : MonoBehaviour
     public float radioVision;
     public float ataqueVision;
     public float speed;
+    public int health;
+    public AudioClip BloodSplash;
+    public GameObject deathparticle;
 
     GameObject player;
     Vector3 initialPosition;
@@ -67,6 +70,15 @@ public class EnemigoVolador : MonoBehaviour
         }
 
         Debug.DrawLine(transform.position, target, Color.green);
+
+        if (health <= 0)
+        {
+            Instantiate(deathparticle, transform.position, transform.rotation);
+            Destroy(gameObject);
+            AudioSource.PlayClipAtPoint(BloodSplash, transform.position);
+
+
+        }
     }
 
     

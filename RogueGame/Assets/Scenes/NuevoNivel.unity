@@ -8709,6 +8709,9 @@ MonoBehaviour:
   radioVision: 3
   ataqueVision: 1
   speed: 5
+  health: 4
+  BloodSplash: {fileID: 0}
+  deathparticle: {fileID: 0}
 --- !u!1 &2073464076
 GameObject:
   m_ObjectHideFlags: 0
