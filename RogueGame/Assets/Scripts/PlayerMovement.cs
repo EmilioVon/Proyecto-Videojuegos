@@ -8,10 +8,6 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D myRigidbody;
     private Vector3 change;
     private Animator animator;
-    public GameObject bulletprefab;
-    public float bulletspeed;
-    private float lastFire;
-    public float fireDelay;
 
     // Start is called before the first frame update
     void Start()
@@ -26,25 +22,7 @@ public class PlayerMovement : MonoBehaviour
         change = Vector3.zero;
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");
-        float shootHor = Input.GetAxis("Shoot Horizontal");
-        float shootVer = Input.GetAxis("Shoot Vertical");
-        if((shootHor != 0 || shootVer != 0) && Time.time > lastFire + fireDelay)
-        {
-            Shoot(shootHor, shootVer);
-            lastFire = Time.time;
-        }
         UpdateAnimationAndMove();
-    }
-
-    void Shoot(float x, float y)
-    {
-        GameObject bullet = Instantiate(bulletprefab, transform.position, transform.rotation) as GameObject;
-        bullet.AddComponent<Rigidbody2D>().gravityScale = 0;
-        bullet.GetComponent<Rigidbody2D>().velocity = new Vector3(
-            (x < 0) ? Mathf.Floor(x)* bulletspeed : Mathf.Ceil(x)*bulletspeed,
-            (y < 0) ? Mathf.Floor(y) * bulletspeed : Mathf.Ceil(y) * bulletspeed,
-            0
-            );
     }
 
     void UpdateAnimationAndMove()
@@ -66,7 +44,8 @@ public class PlayerMovement : MonoBehaviour
     {
         change.Normalize();
         myRigidbody.MovePosition(
-            transform.position + change * speed * Time.deltaTime);
+            transform.position + change * speed * Time.deltaTime
+            );
     }
 
     
