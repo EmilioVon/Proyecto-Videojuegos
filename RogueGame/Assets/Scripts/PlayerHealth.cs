@@ -5,16 +5,15 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
 
-    public int maxHealth = 4;
-    public int currentHealth;
+    public static int maxHealth = 4;
+    public static int currentHealth;
     public HealthBar healthBar;
 
-    public Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
+
         healthBar.SetMaxHealth(maxHealth);
     }
 

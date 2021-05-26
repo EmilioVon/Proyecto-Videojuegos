@@ -7,6 +7,7 @@ public class GameSFX : MonoBehaviour
 public AudioSource GrassStep;
 public AudioSource DaggerWoosh;
 public AudioSource LittleMonsterLaugh;
+public AudioSource ArcadeCoin;
 
     public void PlayGrassStep() {
     GrassStep.Play ();
@@ -17,5 +18,9 @@ public AudioSource LittleMonsterLaugh;
     public void PlayLittleMonsterLaugh() {
     LittleMonsterLaugh.Play ();
 }
+    public void PlayarcadeCoin()
+    {
+        ArcadeCoin.Play();
+    }
 
 }
