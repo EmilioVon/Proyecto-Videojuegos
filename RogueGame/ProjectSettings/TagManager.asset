@@ -12,6 +12,7 @@ TagManager:
   - HealthPotion
   - canvas
   - healthbar
+  - startPos
   layers:
   - Default
   - TransparentFX

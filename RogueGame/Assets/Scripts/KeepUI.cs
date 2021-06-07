@@ -9,5 +9,6 @@ public class KeepUI : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(rootCanvas);
+        
     }
 }

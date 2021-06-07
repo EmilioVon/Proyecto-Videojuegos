@@ -48,5 +48,14 @@ public class PlayerMovement : MonoBehaviour
             );
     }
 
-    
+    private void OnLevelWasLoaded(int level)
+    {
+        FindStartPos();
+    }
+
+    void FindStartPos()
+    {
+        player.transform.position = GameObject.FindWithTag("Respawn").transform.position;
+    }
+
 }
