@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    float moveSpeed = 5f; 
+    float moveSpeed = 5f;
+
+    float rotationPerMinute = 20.0f;
 
     Rigidbody2D rb;
 
@@ -29,5 +31,10 @@ public class Bullet : MonoBehaviour
             Debug.Log("hit!");
             Destroy(gameObject);
         }
+    }
+
+    private void Update()
+    {
+        transform.Rotate(0, 0, 6.0f * rotationPerMinute * Time.deltaTime, 0);
     }
 }
