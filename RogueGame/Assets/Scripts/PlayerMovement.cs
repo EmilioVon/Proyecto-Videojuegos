@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FindStartPos()
     {
-        player.transform.position = GameObject.FindWithTag("Respawn").transform.position;
+       transform.position = GameObject.FindWithTag("startPos").transform.position;
     }
 
 }
