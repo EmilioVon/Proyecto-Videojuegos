@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    float moveSpeed = 7f; 
+    float moveSpeed = 5f; 
 
     Rigidbody2D rb;
 
@@ -22,4 +22,12 @@ public class Bullet : MonoBehaviour
         
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.name.Equals("Player"))
+        {
+            Debug.Log("hit!");
+            Destroy(gameObject);
+        }
+    }
 }
