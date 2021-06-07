@@ -9,6 +9,7 @@ TagManager:
   - ScoreItem
   - GraficsUI
   - Trap
+  - HealthPotion
   layers:
   - Default
   - TransparentFX

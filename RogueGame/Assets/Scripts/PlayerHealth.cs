@@ -49,4 +49,5 @@ public class PlayerHealth : MonoBehaviour
             TakeDamage(1);
         }
     }
+
 }
