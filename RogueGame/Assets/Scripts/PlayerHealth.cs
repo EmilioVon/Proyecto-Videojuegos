@@ -40,4 +40,13 @@ public class PlayerHealth : MonoBehaviour
             TakeDamage(1);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Trap"))
+        {
+            Debug.Log("has collided with trap");
+            TakeDamage(1);
+        }
+    }
 }
