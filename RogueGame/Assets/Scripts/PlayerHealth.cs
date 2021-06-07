@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
 
-    public static int maxHealth = 4;
-    public static int currentHealth;
+    public int maxHealth = 4;
+    public int currentHealth;
     public HealthBar healthBar;
 
     // Start is called before the first frame update
@@ -31,7 +31,14 @@ public class PlayerHealth : MonoBehaviour
         healthBar.SetHealth(currentHealth);
     }
 
-  
+    void getHealth(int damage)
+    {
+        currentHealth += damage;
+
+        healthBar.SetHealth(currentHealth);
+    }
+
+
     private void OnCollisionEnter2D(Collision2D other1)
     {
         if (other1.collider.tag == "Enemy")
@@ -47,6 +54,12 @@ public class PlayerHealth : MonoBehaviour
         {
             Debug.Log("has collided with trap");
             TakeDamage(1);
+        }
+
+        if (collision.gameObject.CompareTag("HealthPotion"))
+        {
+            Debug.Log("has taken healthPotion");
+            getHealth(1);
         }
     }
 

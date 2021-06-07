@@ -10,6 +10,8 @@ TagManager:
   - GraficsUI
   - Trap
   - HealthPotion
+  - canvas
+  - healthbar
   layers:
   - Default
   - TransparentFX
