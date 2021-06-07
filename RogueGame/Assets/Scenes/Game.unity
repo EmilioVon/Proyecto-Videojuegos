@@ -6665,7 +6665,6 @@ GameObject:
   - component: {fileID: 513053609}
   - component: {fileID: 513053610}
   - component: {fileID: 513053611}
-  - component: {fileID: 513053612}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -6858,18 +6857,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ArcadeCoin: {fileID: 8300000, guid: 5a16ced764df7a64d945d9859118808b, type: 3}
---- !u!114 &513053612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 513053602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58ff1155c95a34a46b03925b824faff0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &554551998
 GameObject:
   m_ObjectHideFlags: 0
