@@ -61,6 +61,13 @@ public class PlayerHealth : MonoBehaviour
             Debug.Log("has taken healthPotion");
             getHealth(1);
         }
+
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            Debug.Log("has collided with trap");
+            TakeDamage(1);
+        }
+
     }
 
 }
