@@ -30,7 +30,8 @@ public class SwordDamage : MonoBehaviour
                 {
                     enemiesToDamage[i].GetComponent<Patrol>().TakeDamage(damage);
                     enemiesToDamage[i].GetComponent<EnemigoVolador>().TakeDamage(damage);
-                 
+                    enemiesToDamage[i].GetComponent<BossDamage>().TakeDamage(damage);
+
             }
             }
           
