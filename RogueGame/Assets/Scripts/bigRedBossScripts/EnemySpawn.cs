@@ -22,12 +22,12 @@ public class EnemySpawn : MonoBehaviour
     }
     private void Update()
     {
-        if (!IsInvoking("spawnObject") && healthscript.health == 250)
+        if (!IsInvoking("spawnObject") && healthscript.health < 250)
         {
             InvokeRepeating("spawnObject", spawnTime, spawnDelay);
 
         }
-        if(healthscript.health == 0)
+        if(IsInvoking("spawnObject") && healthscript.health <= 0)
         {
             CancelInvoke("spawnObject");
             

@@ -6506,7 +6506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb301ee7564c45a49adef3146e44b930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 30
 --- !u!61 &513053608
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12585,7 +12585,7 @@ Transform:
   - {fileID: 898949818}
   - {fileID: 1992701700}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1578160101
 MonoBehaviour:
@@ -14671,7 +14671,7 @@ PrefabInstance:
     - target: {fileID: 5884658434660343237, guid: 1c196560208cfa94ca5b02cb5196a39b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5884658434660343237, guid: 1c196560208cfa94ca5b02cb5196a39b,
         type: 3}
