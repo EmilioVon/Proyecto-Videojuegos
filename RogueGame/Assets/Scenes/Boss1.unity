@@ -2585,7 +2585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f225264db55972a48ba350414826199e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 500
+  health: 250
   swordDamage: 5
   BloodSplash: {fileID: 8300000, guid: 9a3b230623d1a6048baf233ff2f4c8c6, type: 3}
   deathparticle: {fileID: 1507160724440436896, guid: 70b2ebd01514d68478ab2e3b26e97759,
@@ -2815,8 +2815,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1932954952}
+  - component: {fileID: 1932954953}
   m_Layer: 0
-  m_Name: SpawnPositions
+  m_Name: RandomEnemySpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2842,6 +2843,29 @@ Transform:
   m_Father: {fileID: 1547297860}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1932954953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932954951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fba90acbd50305428d1792e1ce08267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: {fileID: 1489968063}
+  spawnPoints:
+  - {fileID: 620949485}
+  - {fileID: 1792669686}
+  - {fileID: 1971505154}
+  - {fileID: 569290064}
+  - {fileID: 507660999}
+  - {fileID: 861031573}
+  enemy: {fileID: 6044944787964137529, guid: 837f54c0cb3f6a141b39b06a387fd41c, type: 3}
+  spawnTime: 3
+  spawnDelay: 2
 --- !u!1 &1971505153
 GameObject:
   m_ObjectHideFlags: 0

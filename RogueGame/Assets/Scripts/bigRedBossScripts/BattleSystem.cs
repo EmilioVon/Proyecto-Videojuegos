@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class BattleSystem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        StartBattle();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void StartBattle()
     {
-        
+        Debug.Log("startbattle");
     }
+
+
 }
