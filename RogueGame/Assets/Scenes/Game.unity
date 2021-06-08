@@ -9065,6 +9065,7 @@ GameObject:
   - component: {fileID: 746742269}
   - component: {fileID: 746742271}
   - component: {fileID: 746742270}
+  - component: {fileID: 746742272}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -9155,6 +9156,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &746742272
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746742268}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.12722933, y: -0.23128694}
+      - {x: -0.19225696, y: -0.18761605}
+      - {x: -0.29623142, y: -0.009418458}
+      - {x: 0.10839333, y: 0.3916067}
+      - {x: 0.3508188, y: 0.37863275}
+      - {x: 0.36565962, y: 0.14707336}
+      - {x: -0.00718379, y: -0.22462489}
+      - {x: -0.02495797, y: -0.24419868}
 --- !u!1 &776764294
 GameObject:
   m_ObjectHideFlags: 0
