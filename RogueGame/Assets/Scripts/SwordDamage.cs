@@ -4,37 +4,40 @@ using UnityEngine;
 
 public class SwordDamage : MonoBehaviour
 {
+    /*
     private float tpataque;
     public float emptpataque;
 
     public Transform attackPos;
     public LayerMask queEnemigo;
     public float attackRange;
+
+    */
     public int damage;
 
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
 
+    }
+/*
     // Update is called once per frame
     void Update()
     {
 
-   
-            if (Input.GetKey(KeyCode.Space))
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, queEnemigo);
+            for (int i = 0; i < enemiesToDamage.Length; i++)
             {
-                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, queEnemigo);
-                for (int i = 0; i < enemiesToDamage.Length; i++)
-                {
-                    enemiesToDamage[i].GetComponent<Patrol>().TakeDamage(damage);
-                    enemiesToDamage[i].GetComponent<EnemigoVolador>().TakeDamage(damage);
-                    enemiesToDamage[i].GetComponent<BossDamage>().TakeDamage(damage);
+                enemiesToDamage[i].GetComponent<Patrol>().TakeDamage(damage);
+                enemiesToDamage[i].GetComponent<EnemigoVolador>().TakeDamage(damage);
+                enemiesToDamage[i].GetComponent<BossDamage>().TakeDamage(damage);
 
             }
-            }
-          
+        }
+
     }
 
     void OnDrawGizmosSelected()
@@ -42,5 +45,17 @@ public class SwordDamage : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPos.position, attackRange);
     }
-  
+*/
+
+    /*
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (Input.GetKeyDown("space") || Input.GetMouseButtonDown(0) && collision.tag == "Enemy")
+        {
+            Debug.Log("Enemy took a hit");
+            GetComponent<EnemyDamage>().TakeDamage(damage);
+
+        }
+    }
+    */
 }
