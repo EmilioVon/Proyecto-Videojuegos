@@ -25,5 +25,9 @@ public class PlayerScore : MonoBehaviour
             Destroy(collision.gameObject);
             AudioSource.PlayClipAtPoint(ArcadeCoin, transform.position);
         }
+        if (collision.tag == "HealthPotion")
+        {
+            AudioSource.PlayClipAtPoint(ArcadeCoin, transform.position);
+        }
     }
 }
