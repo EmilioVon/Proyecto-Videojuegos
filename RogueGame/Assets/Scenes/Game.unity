@@ -12506,6 +12506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: level8
+  levelGenerate: 0
 --- !u!1 &1793843113
 GameObject:
   m_ObjectHideFlags: 0
@@ -14002,7 +14003,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 454b06d51c6aa304a90bc45946fcf4e6,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: fa7f6328291b20143ae41fca6ea2a43b, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -14114,6 +14115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 2119315822}
+  healthleft: {fileID: 0}
 --- !u!1 &2128230089
 GameObject:
   m_ObjectHideFlags: 0
