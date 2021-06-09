@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
 
     float rotationPerMinute = 20.0f;
 
+    
     Rigidbody2D rb;
 
     PlayerMovement target;
@@ -31,6 +32,7 @@ public class Bullet : MonoBehaviour
             Debug.Log("hit!");
             Destroy(gameObject);
         }
+        
     }
 
     private void Update()
