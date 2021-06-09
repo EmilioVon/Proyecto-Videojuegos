@@ -7,12 +7,14 @@ public class BigRedBossController : MonoBehaviour
     [SerializeField]
     GameObject bullet;
 
+    public float firerateSet;
+
     float fireRate;
     float nextFire;
     // Start is called before the first frame update
     void Start()
     {
-        fireRate = 1f;
+        fireRate = firerateSet;
         nextFire = Time.time;
     }
 

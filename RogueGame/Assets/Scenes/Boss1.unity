@@ -3083,6 +3083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 4151644112666113149, guid: 8cf1b7173ec78fc4893ebb5a0ed3b9a6, type: 3}
+  firerateSet: 2
 --- !u!114 &1489968068
 MonoBehaviour:
   m_ObjectHideFlags: 0
