@@ -5,17 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class MusicaContinua : MonoBehaviour
 {
-   private void Awake()
-    {
-        Scene currentScene = SceneManager.GetActiveScene();
-        string sceneName = currentScene.name;
+    private static MusicaContinua instance;
 
-        GameObject[] musicObj = GameObject.FindGameObjectsWithTag("GameMusic");
-        if(musicObj.Length > 1 || sceneName == "Boss1")
+    private void Awake()
+    {
+        if(instance == null)
         {
-            Destroy(this.gameObject);
+            instance = this;
+            DontDestroyOnLoad(instance);
         }
-        DontDestroyOnLoad(this.gameObject);
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
 }
