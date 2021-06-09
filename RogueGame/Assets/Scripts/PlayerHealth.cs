@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 4;
     public int currentHealth;
     public HealthBar healthBar;
+    public AudioClip PlayerHurt;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +36,7 @@ public class PlayerHealth : MonoBehaviour
 
     void TakeDamage(int damage)
     {
+        AudioSource.PlayClipAtPoint(PlayerHurt, transform.position);
         currentHealth -= damage;
 
         healthBar.SetHealth(currentHealth);
