@@ -14002,7 +14002,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 454b06d51c6aa304a90bc45946fcf4e6,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: fa7f6328291b20143ae41fca6ea2a43b, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -14113,7 +14113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b8c7d64cce85ec48a5acf6b38d3545b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSource: {fileID: 0}
+  musicSource: {fileID: 2119315822}
 --- !u!1 &2128230089
 GameObject:
   m_ObjectHideFlags: 0
@@ -14409,5 +14409,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1145505062}
+    - target: {fileID: 7757892452193105023, guid: 70e19aae1a77ef5429264dfe46d051cf,
+        type: 3}
+      propertyPath: maxHealth
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70e19aae1a77ef5429264dfe46d051cf, type: 3}

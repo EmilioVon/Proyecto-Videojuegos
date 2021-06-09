@@ -16,13 +16,18 @@ public class MusicaContinua : MonoBehaviour
             Destroy(gameObject);
 
         DontDestroyOnLoad(gameObject);
+       
     }
     void Update()
     {
+    
         Scene currentScene = SceneManager.GetActiveScene();
         if (currentScene.name == "Boss1")
         {
-            Destroy(gameObject);
+            musicSource.Pause();
         }
+        
+ 
     }
+ 
 }
