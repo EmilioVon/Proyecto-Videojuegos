@@ -8,7 +8,7 @@ public class MusicaContinua : MonoBehaviour
     public AudioSource musicSource;
     public static MusicaContinua instance = null;
     public EnemyDamage healthleft;
-    
+
 
     void Awake()
     {
@@ -19,7 +19,7 @@ public class MusicaContinua : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
 
-       
+
     }
 
     private void Start()
@@ -33,7 +33,7 @@ public class MusicaContinua : MonoBehaviour
     }
     void Update()
     {
-    
+
         Scene currentScene = SceneManager.GetActiveScene();
         if (currentScene.name == "Boss1")
         {
@@ -44,6 +44,12 @@ public class MusicaContinua : MonoBehaviour
         if (currentScene.name != "Boss1" && !musicSource.isPlaying)
         {
             musicSource.Play();
+        }
+
+        if (currentScene.name == "Menu")
+        {
+            Destroy(gameObject);
+
         }
 
     }
