@@ -421,11 +421,32 @@ MonoBehaviour:
   - {fileID: 1844311358}
   - {fileID: 251277112}
   - {fileID: 1436114422}
-  speed: 10
-  health: 4
+  speed: 3
+  startWaitTime: 1
+--- !u!212 &713878915 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1998432287838117230, guid: 5d310dad33120754ab193bd126b6c526,
+    type: 3}
+  m_PrefabInstance: {fileID: 1998432287478247663}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &713878917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713878911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f225264db55972a48ba350414826199e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  swordDamage: 5
   BloodSplash: {fileID: 8300000, guid: f77ecce4957bae14f80c9df52663db38, type: 3}
   deathparticle: {fileID: 1507160724440436896, guid: 70b2ebd01514d68478ab2e3b26e97759,
     type: 3}
+  sprite: {fileID: 713878915}
 --- !u!1 &732574916
 GameObject:
   m_ObjectHideFlags: 0
