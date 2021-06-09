@@ -7,9 +7,6 @@ public class EnemySlime : MonoBehaviour
     public Transform[] patrolPoints;
 
     public float speed;
-    public int health;
-    public AudioClip BloodSplash;
-    public GameObject deathparticle;
 
     Transform currentPatrolPoint;
     int currentPatrolIndex;
@@ -28,7 +25,7 @@ public class EnemySlime : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.up * Time.deltaTime * speed);
+        // transform.Translate(Vector3.up * Time.deltaTime * speed);
 
         if(Vector3.Distance (transform.position,currentPatrolPoint.position) < .1f)
         {
@@ -41,20 +38,8 @@ public class EnemySlime : MonoBehaviour
             }
             currentPatrolPoint = patrolPoints[currentPatrolIndex];
         }
-        if (health <= 0)
-        {
-            Instantiate(deathparticle, transform.position, transform.rotation);
-            Destroy(gameObject);
-            AudioSource.PlayClipAtPoint(BloodSplash, transform.position);
-
-
-        }
+     
 
     }
-    public void TakeDamage(int damage)
-    {
-        health -= damage;
-        //Debug.Log("Lastimaste al enemigo");
-    }
-
+  
 }
