@@ -27,7 +27,7 @@ public class MusicaContinua : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene();
         if (currentScene.name == "Boss1")
         {
-            healthleft = FindObjectOfType<BigRedBossController>().GetComponent<EnemyDamage>();
+            healthleft = GameObject.Find("BigRedBoss").GetComponent<EnemyDamage>();
         }
 
     }
@@ -38,14 +38,14 @@ public class MusicaContinua : MonoBehaviour
         if (currentScene.name == "Boss1")
         {
             musicSource.Pause();
-            if (healthleft.health <= 0)
-            {
-                musicSource.Play();
-            }
+            
         }
 
+        if (currentScene.name != "Boss1" && !musicSource.isPlaying)
+        {
+            musicSource.Play();
+        }
 
- 
     }
  
 }

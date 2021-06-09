@@ -19,7 +19,7 @@ public class SceneTransition : MonoBehaviour
         if(other.CompareTag("Player") && !other.isTrigger)
         {
             levelGenerate = Random.Range(3, 11);
-
+            // && Global.contador != 0
             if (Global.contador % 6 == 0 && Global.contador != 0)
             {
                 Global.contador++;
