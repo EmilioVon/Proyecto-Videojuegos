@@ -851,11 +851,11 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 454b06d51c6aa304a90bc45946fcf4e6,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 93d1ddf4fd9b2174793122d785d94dc9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 37a48156c836a3f42ba65cfb8b1138bb, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

@@ -5,26 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class MusicaContinua : MonoBehaviour
 {
-    public AudioClip Overworld;
-    public AudioClip Boss;
-    private AudioSource audioSource;
+    public AudioSource musicSource;
+    public static MusicaContinua instance = null;
 
-    void Start()
+    void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
-        if(audioSource.isPlaying)
-        {
-            audioSource.Stop();
-        }
-        audioSource.clip = Overworld;
-        audioSource.Play();
+        if (instance == null)
+            instance = this;
+        else if (instance != this)
+            Destroy(gameObject);
 
-        if(audioSource.isPlaying)
-        {
-            audioSource.Stop();
-        }
-        audioSource.clip = Boss;
-        audioSource.Play();
+        DontDestroyOnLoad(gameObject);
     }
-
+    void Update()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        if (currentScene.name == "Boss1")
+        {
+            Destroy(gameObject);
+        }
+    }
 }

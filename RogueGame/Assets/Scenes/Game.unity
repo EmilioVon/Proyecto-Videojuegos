@@ -14001,7 +14001,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 454b06d51c6aa304a90bc45946fcf4e6,
     type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: fa7f6328291b20143ae41fca6ea2a43b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -14113,8 +14113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b8c7d64cce85ec48a5acf6b38d3545b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Overworld: {fileID: 8300000, guid: fa7f6328291b20143ae41fca6ea2a43b, type: 3}
-  Boss: {fileID: 8300000, guid: d887a2a61ba16934ab20980c652f9e35, type: 3}
+  musicSource: {fileID: 0}
 --- !u!1 &2128230089
 GameObject:
   m_ObjectHideFlags: 0
